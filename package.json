@@ -1,0 +1,23 @@
+{
+  "name": "cashsun.github.io",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cashsun/cashsun.github.io.git"
+  },
+  "keywords": [
+    "cashsun",
+    "blog"
+  ],
+  "author": "Cash Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cashsun/cashsun.github.io/issues"
+  },
+  "homepage": "https://github.com/cashsun/cashsun.github.io#readme"
+}
