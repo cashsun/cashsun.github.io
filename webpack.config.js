@@ -4,7 +4,8 @@ const webpack = require('webpack');
 module.exports = {
     cache: true,
     entry: {
-        index: path.join(__dirname, 'js/main.js')
+        index: path.join(__dirname, 'js/main.js'),
+        projects: path.join(__dirname, 'js/projects-main.js')
     },
     output: {
         filename: '[name].build.js',
@@ -27,9 +28,7 @@ module.exports = {
     devtool: 'cheap-module-eval-source-map',
     plugins: [
         new webpack.ProvidePlugin({
-            $: "jquery",
-            // THREE: "three"
+            $: "jquery"
         })
     ]
-
 };

@@ -11,7 +11,7 @@ browserSync.init({
     proxy: `localhost:${port}`
 });
 
-browserSync.watch(path.join(__dirname, '../js/index.build.js'), browserSync.reload);
+browserSync.watch(path.join(__dirname, '../js/*.build.js'), browserSync.reload);
 
 function handleError() {
     server.close();

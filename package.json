@@ -40,7 +40,6 @@
     "redux": "^3.6.0",
     "rehearse": "^1.5.4",
     "style-loader": "^0.13.1",
-    "three": "^0.82.1",
     "webpack": "^1.13.3"
   }
 }
