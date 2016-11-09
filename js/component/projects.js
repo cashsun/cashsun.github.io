@@ -1,23 +1,27 @@
 import React from 'react';
 import Particles from './particles';
 import styles from './projects.less';
+import { Link } from 'react-router';
+const pathname = '/projects';
 
 export default function (props) {
+    const pid = props.location.query.pid;
+
     return (
         <div className={styles.base}>
             <Particles/>
             <ul>
                 <li>
-                    <a href="/projects?pid=rehearse">Rehearse</a>
+                    <Link to={{ pathname: pathname, query: { pid: 'rehearse' } }}>Rehearse</Link>
                 </li>
                 <li>
-                    <a href="/projects?pid=redux-quick-actions">Redux-Quick-Actions</a>
+                    <Link to={{ pathname: pathname, query: { pid: 'redux-quick-actions' } }}>Redux-Quick-Actions</Link>
                 </li>
                 <li>
-                    <a href="/projects?pid=hanabi">Hanabi</a>
+                    <Link to={{ pathname: pathname, query: { pid: 'hanabi'}}}>Hanabi</Link>
                 </li>
                 <li>
-                    <a href="/projects?pid=graphic-design">Graphic Design</a>
+                    <Link to={{ pathname: pathname, query: { pid: 'graphic-design'}}}>Graphic Design</Link>
                 </li>
             </ul>
         </div>
