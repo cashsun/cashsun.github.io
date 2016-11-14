@@ -12,6 +12,9 @@ module.exports = {
         publicPath: '/',
         path: path.join(__dirname, 'js')
     },
+    watchOptions: {
+        poll: true
+    },
     module: {
         loaders: [
             {

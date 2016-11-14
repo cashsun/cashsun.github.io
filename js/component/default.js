@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import Particles from './particles';
 import styles from './default.less';
+import { Link } from 'react-router';
 
 export default class Default extends PureComponent {
 
@@ -8,10 +9,10 @@ export default class Default extends PureComponent {
         return (
             <div className={styles.base}>
                 <Particles />
-                <a href="/projects">
+                <Link to='projects'>
                     <div className={styles.profile}></div>
                     <div className={styles.contact}>London, United Kingdom/mr.cashsun@gmail.com</div>
-                </a>
+                </Link>
             </div>
         )
     }
