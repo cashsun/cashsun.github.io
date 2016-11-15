@@ -2,14 +2,15 @@
 @menu-left: 10px;
 
 .drop-shadow {
-  -webkit-box-shadow: 5px 5px 0px 0px rgba(138,138,138,1);
-  -moz-box-shadow: 5px 5px 0px 0px rgba(138,138,138,1);
-  box-shadow: 5px 5px 0px 0px rgba(138,138,138,1);
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(138, 138, 138, 1);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(138, 138, 138, 1);
+  box-shadow: 5px 5px 0px 0px rgba(138, 138, 138, 1);
 }
 
 .base {
   * {
     z-index: 3;
+    font-family: 'Rubik', Georgia, sans-serif;
   }
   position: relative;
   display: block;
@@ -34,9 +35,9 @@
       -o-transition: top .2s ease-in-out;
       transition: top .2s ease-in-out;
 
-      -webkit-user-select: none;  /* Chrome all / Safari all */
-      -moz-user-select: none;     /* Firefox all */
-      -ms-user-select: none;      /* IE 10+ */
+      -webkit-user-select: none; /* Chrome all / Safari all */
+      -moz-user-select: none; /* Firefox all */
+      -ms-user-select: none; /* IE 10+ */
       user-select: none;
 
       cursor: pointer;
@@ -44,8 +45,6 @@
 
       width: 100%;
       -webkit-font-smoothing: antialiased;
-
-      font-family: 'Rubik', Georgia, sans-serif;
       font-size: 1.3em;
       letter-spacing: 7px;
       text-transform: lowercase;
@@ -60,7 +59,7 @@
   }
 
   .description {
-    top:100px;
+    top: 100px;
     position: absolute;
     display: block;
     width: @menu-width + 5%;

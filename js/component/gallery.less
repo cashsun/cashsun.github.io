@@ -1,0 +1,35 @@
+.drop-shadow {
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(138, 138, 138, 1);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(138, 138, 138, 1);
+  box-shadow: 5px 5px 0px 0px rgba(138, 138, 138, 1);
+}
+
+.base {
+  .divider {
+    color: #818181;
+    letter-spacing: 6px;
+    span {
+      font-size: 10px;
+      padding: 5px;
+      display: inline-block;
+      width: 100%;
+      border-bottom: 1px solid;
+      margin-bottom: 30px;
+    }
+
+  }
+  .thumbnail {
+    float: left;
+    img {
+      border: 10px solid white;
+      width: 100px;
+      margin: 0 20px 20px 0;
+    }
+    display: inline-block;
+
+    &.a, &.a:hover {
+      text-decoration: none;
+      background: none;
+    }
+  }
+}

@@ -1,15 +1,17 @@
 import React, { PureComponent } from 'react';
 import Particles from './particles';
 import Description from './description';
+import  Gallery from './gallery';
 import styles from './projects.less';
 import { Link } from 'react-router';
 import Transition from 'react-motion-ui-pack';
-import { spring, Motion } from 'react-motion';
+import { spring } from 'react-motion';
 const pathname = '/projects';
 const REHEARSE = 'rehearse';
 const REDUX_QUICK_ACTIONS = 'redux_quick_actions';
 const HANABI = 'hanabi';
 const GRAPHIC_DESIGN = 'graphic_design';
+const GITHUB = 'github';
 
 const descriptions = {
     [REHEARSE]: `A ready to run to built for React components live editing. Hot reload w/ browser-sync made easy.
@@ -41,11 +43,14 @@ const descriptions = {
                     when different reducers handles same action event, 
                     which is in some cases what people want to avoid or use combo actions (see homepage) instead.`,
     [HANABI]: `[private] Hanabi is a fun project set out to be a pixel art avatar editor. 
-    It is part of our jianghu.io site user management add-ons.`
+    It is part of our jianghu.io site user management add-ons.`,
 
+    [GRAPHIC_DESIGN]: `2004-Current Graphic Design. 
+                       Including photography, university promotional works and commercial projects.`,
+
+    [GITHUB]: `Click image for Cash Sun's Github home page.`
 
 };
-
 
 export default class Projects extends PureComponent {
 
@@ -56,9 +61,10 @@ export default class Projects extends PureComponent {
         let description = descriptions[pid];
         switch (pid) {
             case REHEARSE:
-                demo = <a title="Rehearse home page" target="_blank" href="https://cashsun.github.io/rehearse/">
-                    <img className={styles.singleDemo} src="/img/rehearse-demo.gif"/>
-                </a>;
+                demo =
+                    <a title="Rehearse home page" target="_blank" href="https://cashsun.github.io/rehearse/">
+                        <img className={styles.singleDemo} src="/img/rehearse-demo.gif"/>
+                    </a>;
                 break;
             case REDUX_QUICK_ACTIONS:
                 demo = <a title="redux-quick-action home page"
@@ -71,14 +77,22 @@ export default class Projects extends PureComponent {
                     <img className={styles.singleDemo} src="/img/hanabi.gif"/>;
                 break;
             case GRAPHIC_DESIGN:
+                demo = <Gallery/>;
                 break;
 
+            case GITHUB:
+                demo =
+                    <a title="Rehearse home page" target="_blank" href="https://github.com/cashsun">
+                        <img className={styles.singleDemo} src="/img/github.png"/>;
+                    </a>;
+                break;
             default:
                 items = [
+                    GRAPHIC_DESIGN,
                     REHEARSE,
-                    REDUX_QUICK_ACTIONS,
                     HANABI,
-                    GRAPHIC_DESIGN
+                    REDUX_QUICK_ACTIONS,
+                    GITHUB
                 ];
                 break;
         }
@@ -103,7 +117,9 @@ export default class Projects extends PureComponent {
                             <Link activeClassName={styles.active}
                                   to={{ pathname: pathname, query: { pid: item } }}>{item}</Link>
                         </li>
-                    )}
+                    )
+                    }
+
                 </Transition>
                 <Transition
                     component={false} // don't use a wrapping component
